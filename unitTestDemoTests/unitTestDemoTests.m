@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MGRMModel.h"
 
-@interface unitTestDemoTests : XCTestCase
+@interface unitTestDemoTests : XCTestCase {
+    MGRMModel* _model;
+}
 
 @end
 
@@ -18,6 +21,7 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    _model = [[MGRMModel alloc] init];
 }
 
 - (void)tearDown
@@ -26,9 +30,20 @@
     [super tearDown];
 }
 
-- (void)testExample
+-(void)testValues
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertTrue([_model convertToFahrenheit:0] == 32, @"Converting 0");
+    XCTAssertTrue([_model convertToFahrenheit:-40] == -40, @"Converting -40");
 }
+
+-(void)testExtrema
+{
+    int maxValue = (int)((2147483647.0 - 32.0) * 5.0/9.0) + 1;
+    int minValue = (int)((-2147483647.0 - 32.0) * 5.0/9.0) - 1;
+    XCTAssertThrowsSpecific([_model convertToFahrenheit:maxValue], NSException, @"Converting more than max value");
+     XCTAssertThrowsSpecific([_model convertToFahrenheit:minValue], NSException, @"Converting more than max value");
+}
+
+
 
 @end
