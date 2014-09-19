@@ -21,6 +21,7 @@
 		7F079D3519CB850A004ACD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F079D1719CB850A004ACD38 /* UIKit.framework */; };
 		7F079D3D19CB850A004ACD38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F079D3B19CB850A004ACD38 /* InfoPlist.strings */; };
 		7F079D3F19CB850A004ACD38 /* unitTestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F079D3E19CB850A004ACD38 /* unitTestDemoTests.m */; };
+		7F079D4A19CB852E004ACD38 /* MGRMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F079D4919CB852E004ACD38 /* MGRMModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		7F079D3A19CB850A004ACD38 /* unitTestDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "unitTestDemoTests-Info.plist"; sourceTree = "<group>"; };
 		7F079D3C19CB850A004ACD38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F079D3E19CB850A004ACD38 /* unitTestDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unitTestDemoTests.m; sourceTree = "<group>"; };
+		7F079D4819CB852E004ACD38 /* MGRMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGRMModel.h; path = ../MGRMModel.h; sourceTree = "<group>"; };
+		7F079D4919CB852E004ACD38 /* MGRMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGRMModel.m; path = ../MGRMModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		7F079D1919CB850A004ACD38 /* unitTestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7F079D4819CB852E004ACD38 /* MGRMModel.h */,
+				7F079D4919CB852E004ACD38 /* MGRMModel.m */,
 				7F079D2219CB850A004ACD38 /* MGRMAppDelegate.h */,
 				7F079D2319CB850A004ACD38 /* MGRMAppDelegate.m */,
 				7F079D2519CB850A004ACD38 /* Main.storyboard */,
@@ -252,6 +257,7 @@
 			files = (
 				7F079D2019CB850A004ACD38 /* main.m in Sources */,
 				7F079D2A19CB850A004ACD38 /* MGRMViewController.m in Sources */,
+				7F079D4A19CB852E004ACD38 /* MGRMModel.m in Sources */,
 				7F079D2419CB850A004ACD38 /* MGRMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

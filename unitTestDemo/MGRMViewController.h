@@ -10,4 +10,9 @@
 
 @interface MGRMViewController : UIViewController
 
+@property(weak, nonatomic) IBOutlet UITextField* celsiusValueTextField;
+@property(weak, nonatomic) IBOutlet UILabel* fahrenheitValueLabel;
+
+- (IBAction)celsiusValueEntered:(id)sender;
+
 @end

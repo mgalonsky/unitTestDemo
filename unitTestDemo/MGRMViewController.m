@@ -7,8 +7,11 @@
 //
 
 #import "MGRMViewController.h"
+#import "MGRMModel.h"
 
-@interface MGRMViewController ()
+@interface MGRMViewController () {
+    MGRMModel* model;
+}
 
 @end
 
@@ -18,12 +21,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    model = [[MGRMModel alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)celsiusValueEntered:(id)sender
+{
+    int fahrenheit = [model convertToFahrenheit:[self.celsiusValueTextField.text integerValue]];
+    self.fahrenheitValueLabel.text = [NSString stringWithFormat:@"%d", fahrenheit];
 }
 
 @end
